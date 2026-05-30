@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户协议 — Apk导出</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #faf8f4;
+            --surface: #ffffff;
+            --accent: #c9a96e;
+            --accent-dark: #a8853a;
+            --text-primary: #1a1a1a;
+            --text-body: #3d3a36;
+            --text-muted: #8a857e;
+            --border: #e8e4dc;
+            --border-light: #f0ece6;
+            --shadow: rgba(26, 26, 26, 0.04);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            background: var(--bg);
+            color: var(--text-body);
+            line-height: 1.9;
+            font-size: 15.5px;
+            font-weight: 400;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Grain overlay */
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+            pointer-events: none;
+            z-index: 9999;
+        }
+
+        /* Top decorative bar */
+        .top-bar {
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent), var(--accent-dark), var(--accent));
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            padding: 30px 24px 30px;
+            position: relative;
+        }
+
+        .header h1 {
+            font-family: 'Noto Serif SC', serif;
+            font-size: clamp(32px, 5vw, 48px);
+            font-weight: 700;
+            color: var(--text-primary);
+            letter-spacing: 0.04em;
+            opacity: 0;
+            animation: fadeUp 0.7s ease forwards 0.35s;
+        }
+
+        /* Notice box */
+        .notice {
+            max-width: 720px;
+            margin: 0 auto 12px;
+            padding: 28px 32px;
+            background: linear-gradient(135deg, #fdf9f0 0%, #f9f3e8 100%);
+            border-left: 3px solid var(--accent);
+            border-radius: 0 6px 6px 0;
+            font-size: 14px;
+            line-height: 2;
+            color: var(--text-body);
+            opacity: 0;
+            animation: fadeUp 0.7s ease forwards 0.55s;
+        }
+
+        .notice strong {
+            color: var(--text-primary);
+            font-weight: 500;
+        }
+
+        /* Table of contents */
+        .toc {
+            max-width: 720px;
+            margin: 40px auto 0;
+            padding: 0 24px;
+            opacity: 0;
+            animation: fadeUp 0.7s ease forwards 0.65s;
+        }
+
+        .toc-title {
+            font-family: 'Noto Serif SC', serif;
+            font-size: 16px;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .toc-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px 24px;
+        }
+
+        .toc-item {
+            display: flex;
+            align-items: baseline;
+            gap: 10px;
+            padding: 10px 0;
+            border-bottom: 1px solid var(--border-light);
+            text-decoration: none;
+            color: var(--text-body);
+            transition: color 0.2s ease;
+            font-size: 14px;
+        }
+
+        .toc-item:hover {
+            color: var(--accent-dark);
+        }
+
+        .toc-num {
+            font-family: 'Noto Serif SC', serif;
+            font-weight: 700;
+            font-size: 15px;
+            color: var(--accent-dark);
+            min-width: 18px;
+        }
+
+        /* Main content */
+        .content {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 20px 24px 100px;
+        }
+
+        /* Section */
+        .section {
+            margin-top: 56px;
+            opacity: 0;
+            animation: fadeUp 0.6s ease forwards;
+        }
+
+        /* Staggered animation delays for 10 sections */
+        .section:nth-of-type(1) { animation-delay: 0.75s; }
+        .section:nth-of-type(2) { animation-delay: 0.8s; }
+        .section:nth-of-type(3) { animation-delay: 0.85s; }
+        .section:nth-of-type(4) { animation-delay: 0.9s; }
+        .section:nth-of-type(5) { animation-delay: 0.95s; }
+        .section:nth-of-type(6) { animation-delay: 1.0s; }
+        .section:nth-of-type(7) { animation-delay: 1.05s; }
+        .section:nth-of-type(8) { animation-delay: 1.1s; }
+        .section:nth-of-type(9) { animation-delay: 1.15s; }
+        .section:nth-of-type(10) { animation-delay: 1.2s; }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 28px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .section-num {
+            font-family: 'Noto Serif SC', serif;
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--accent);
+            line-height: 1;
+            min-width: 40px;
+        }
+
+        .section-title {
+            font-family: 'Noto Serif SC', serif;
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--text-primary);
+            letter-spacing: 0.02em;
+        }
+
+        /* Subsection */
+        .subsection {
+            margin-top: 28px;
+            margin-bottom: 20px;
+        }
+
+        .subsection-title {
+            font-family: 'Noto Sans SC', sans-serif;
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 12px;
+            padding-left: 14px;
+            border-left: 2px solid var(--accent);
+        }
+
+        /* Paragraphs */
+        .section p {
+            margin-bottom: 16px;
+            text-align: justify;
+        }
+
+        /* Lists */
+        .policy-list {
+            list-style: none;
+            padding: 0;
+            margin: 8px 0 20px;
+        }
+
+        .policy-list > li {
+            position: relative;
+            padding: 10px 0 10px 24px;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .policy-list > li:last-child {
+            border-bottom: none;
+        }
+
+        .policy-list > li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 18px;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--accent);
+        }
+
+        .policy-list.numbered {
+            counter-reset: policy-counter;
+        }
+
+        .policy-list.numbered > li {
+            padding-left: 32px;
+        }
+
+        .policy-list.numbered > li::before {
+            content: counter(policy-counter);
+            counter-increment: policy-counter;
+            width: auto;
+            height: auto;
+            border-radius: 0;
+            background: none;
+            font-family: 'Noto Serif SC', serif;
+            font-weight: 700;
+            font-size: 13px;
+            color: var(--accent-dark);
+            top: 12px;
+        }
+
+        /* Emphasis blocks / Highlight boxes */
+        .callout {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 20px 24px;
+            margin: 20px 0;
+            box-shadow: 0 2px 12px var(--shadow);
+        }
+
+        .callout.alert {
+            background: #fdfaf5;
+            border-left: 3px solid #d4a359;
+        }
+
+        /* Contact block */
+        .contact-block {
+            margin-top: 28px;
+            padding: 28px 32px;
+            background: linear-gradient(135deg, #1a1815 0%, #2a2520 100%);
+            border-radius: 8px;
+            color: #e8e4dc;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-block::before {
+            content: '';
+            position: absolute;
+            top: -40px;
+            right: -40px;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(201, 169, 110, 0.15), transparent 70%);
+        }
+
+        .contact-block p {
+            margin-bottom: 8px;
+            color: #c8c2b8;
+        }
+
+        .contact-block p:last-child {
+            margin-bottom: 0;
+        }
+
+        .contact-email {
+            font-family: 'Noto Serif SC', serif;
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--accent);
+            margin: 0 0 16px;
+            display: inline-block;
+            border-bottom: 1px dashed rgba(201, 169, 110, 0.4);
+            padding-bottom: 2px;
+        }
+
+        .contact-block .response-note {
+            font-size: 13px;
+            line-height: 1.8;
+        }
+
+        .contact-block .response-note strong {
+            color: #e8e4dc;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 40px 24px;
+            border-top: 1px solid var(--border);
+            max-width: 720px;
+            margin: 0 auto;
+        }
+
+        .footer .dates {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        .footer .dates strong {
+            color: var(--text-body);
+            font-weight: 500;
+        }
+
+        .footer .copyright {
+            margin-top: 16px;
+            font-size: 12px;
+            color: var(--text-muted);
+            letter-spacing: 0.05em;
+        }
+
+        /* Animations */
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(18px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .header {
+                padding: 56px 20px 40px;
+            }
+
+            .toc-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .content {
+                padding: 20px 20px 80px;
+            }
+
+            .section-num {
+                font-size: 26px;
+                min-width: 32px;
+            }
+
+            .section-title {
+                font-size: 17px;
+            }
+
+            .notice {
+                padding: 20px 20px;
+            }
+
+            .contact-block {
+                padding: 24px;
+            }
+
+            .footer .dates {
+                flex-direction: column;
+                gap: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <h1>用户协议</h1>
+</header>
+
+<div class="notice">
+    <strong>欢迎使用“Apk导出”（以下简称“本软件”、“应用”或“服务”），该服务由“袁昌杰”（以下简称“我们”）运营。</strong>本服务条款（以下简称“本协议”）是您与我们之间就您下载、安装和使用本应用及相关服务所订立的合同。您下载、安装、使用以及以其他方式访问本软件，均以您接受并遵守本协议为前提。如果您不同意本协议，请立即停止使用本应用。
+</div>
+
+<nav class="toc">
+    <div class="toc-title">目录</div>
+    <div class="toc-grid">
+        <a class="toc-item" href="#s1"><span class="toc-num">一</span>我们的知识产权</a>
+        <a class="toc-item" href="#s2"><span class="toc-num">二</span>应用许可与功能使用范围</a>
+        <a class="toc-item" href="#s3"><span class="toc-num">三</span>隐私与数据安全</a>
+        <a class="toc-item" href="#s4"><span class="toc-num">四</span>本协议的修改</a>
+        <a class="toc-item" href="#s5"><span class="toc-num">五</span>用户年龄限制</a>
+        <a class="toc-item" href="#s6"><span class="toc-num">六</span>第三方软件与版权特别声明</a>
+        <a class="toc-item" href="#s7"><span class="toc-num">七</span>免责声明</a>
+        <a class="toc-item" href="#s8"><span class="toc-num">八</span>赔偿</a>
+        <a class="toc-item" href="#s9"><span class="toc-num">九</span>其他事项</a>
+        <a class="toc-item" href="#s10"><span class="toc-num">十</span>如何联系我们</a>
+    </div>
+</nav>
+
+<main class="content">
+
+    <section class="section" id="s1">
+        <div class="section-header">
+            <div class="section-num">01</div>
+            <h2 class="section-title">我们的知识产权</h2>
+        </div>
+        <p>本应用由我们独立开发。您承认并同意，我们保留与本应用相关的所有著作权、商标、专利、商业秘密，包括所有知识产权及任何其他相关权利、所有权和利益。本应用及相关信息，包括但不限于文字表述及其组合、图标、界面设计、色彩、用户界面、框架、相关数据、印刷材料或电子文档，均受适用国家/地区的著作权法、商标法、专利法、反不正当竞争法以及相关国际条约的保护。</p>
+        <p>您不得（亦不得允许任何其他人）直接或间接采取侵犯或可能侵犯我们及本应用知识产权及相关利益的行为。我们保留追究侵权责任的权利。</p>
+        <div class="callout">
+            <p><strong>禁止反向工程：</strong>除非事先获得我们的书面同意，否则您不得（或委托第三方）以营利或非营利为目的对本应用进行反向工程、反编译或试图获取本应用的源代码，或创作本应用、服务、插件、扩展程序、兼容性、互联行为等的衍生作品。</p>
+        </div>
+    </section>
+
+    <section class="section" id="s2">
+        <div class="section-header">
+            <div class="section-num">02</div>
+            <h2 class="section-title">应用许可与功能使用范围</h2>
+        </div>
+        <p>我们向您授予一项个人的、可撤销的、不可转让的且非排他性的本应用使用许可。您获准在您的智能移动终端设备（以下简称“终端设备”）上为非商业目的安装、使用、显示或运行本应用，以实现对您设备中已安装应用软件（App）的 Apk 安装包进行提取、备份和分享等功能。</p>
+        <p>您应当仅出于个人备份、学习研究等合法目的使用本应用。您在以下情况下不得使用本应用：</p>
+        <ul class="policy-list">
+            <li>利用本应用提取、分发、传播侵犯第三方知识产权（包括但不限于盗版、未经授权的商业软件）的 Apk 文件；</li>
+            <li>以任何方式（无论是全部还是部分）创作本应用的衍生作品或对本应用进行商业开发；</li>
+            <li>实施任何危害计算机网络安全的行为，包括但不限于：利用本应用探查、扫描、测试系统漏洞，或故意利用提取功能破坏、干扰其他软件的正常运行。</li>
+        </ul>
+        <p>除非本应用的功能显式允许（如自带的分享功能），否则您不得将本应用本身用于商业销售、修改或二次分发。</p>
+    </section>
+
+    <section class="section" id="s3">
+        <div class="section-header">
+            <div class="section-num">03</div>
+            <h2 class="section-title">隐私与数据安全</h2>
+        </div>
+        <div class="subsection">
+            <h3 class="subsection-title">本地处理原则</h3>
+            <p>我们的软件专注于提供本地工具服务。本应用在提取、备份 Apk 文件时，相关数据均在您的终端设备本地进行处理。</p>
+        </div>
+        <div class="subsection">
+            <h3 class="subsection-title">授权与同意</h3>
+            <p>有关我们如何收集、使用和保护您的必要个人数据（如实现分享、存储等功能所需的必要系统权限），请查看我们的《隐私政策》。您同意我们可以根据《隐私政策》处理相关数据。</p>
+        </div>
+    </section>
+
+    <section class="section" id="s4">
+        <div class="section-header">
+            <div class="section-num">04</div>
+            <h2 class="section-title">本协议的修改</h2>
+        </div>
+        <p>当前软件中增加的任何新功能也将受本协议的约束。您可以随时在我们的软件上查看本协议的最新版本。</p>
+        <p>我们保留通过在软件上发布更新和/或变更来更新、更改或替换本协议任何部分的权利。如果您在协议条款变更之日后继续使用我们的软件，我们将视您的继续使用为接受并遵守更新后的条款。</p>
+    </section>
+
+    <section class="section" id="s5">
+        <div class="section-header">
+            <div class="section-num">05</div>
+            <h2 class="section-title">用户年龄限制</h2>
+        </div>
+        <p>本应用并不直接针对任何未成年用户。如果您是未成年用户并坚持使用本应用，请先征得您的监护人和/或其他具有监护职责的成人的同意，并在其指导和监督下使用本应用。</p>
+    </section>
+
+    <section class="section" id="s6">
+        <div class="section-header">
+            <div class="section-num">06</div>
+            <h2 class="section-title">第三方软件与版权特别声明</h2>
+        </div>
+        <div class="callout alert">
+            <p><strong>技术工具属性：</strong>本软件作为技术工具，仅为您提供读取和备份您终端设备上已有 Apk 文件的技术便利。本软件自身不提供任何第三方应用软件的下载、安装包存储或分发源。</p>
+        </div>
+        <p>您通过本软件提取、备份或分享的第三方应用，其知识产权均归该第三方应用的权利人所有。您必须确保您提取和分享行为已获得原权利人的许可，或属于法律允许的合理使用范围（如个人备份）。</p>
+        <p>因您不当使用本软件（包括但不限于将提取的 Apk 用于非法传播、商业牟利、破解、侵犯他人著作权等）所引起的任何法律纠纷、侵权索赔，均由您自行承担全部法律责任，与本软件及开发人员无关。</p>
+    </section>
+
+    <section class="section" id="s7">
+        <div class="section-header">
+            <div class="section-num">07</div>
+            <h2 class="section-title">免责声明</h2>
+        </div>
+        <ol class="policy-list numbered">
+            <li>您承认并同意，由于系统兼容性（如不同 Android 系统版本的限制）、设备存储空间不足、系统权限受限、移动通信终端病毒或黑客攻击、系统不稳定以及其他涉及技术、终端故障等原因，本应用可能存在提取失败、分享中断、无法响应等潜在风险。在任何情况下，我们均不对上述任何风险及导致的任何直接或间接损失承担责任。</li>
+            <li>鉴于业务发展、系统升级和调整的需要，我们保留随时修改、暂停或终止部分或全部服务的权利，行使该权利时我们对用户及任何其他第三方不承担责任。</li>
+            <li>未经我们正式发布或授权的本软件衍生作品均属非法。用户通过非官方渠道下载、安装和使用本应用可能会带来不可预知的风险（如数据损坏、捆绑木马），我们对此引发的任何法律责任和问题不承担责任。</li>
+        </ol>
+    </section>
+
+    <section class="section" id="s8">
+        <div class="section-header">
+            <div class="section-num">08</div>
+            <h2 class="section-title">赔偿</h2>
+        </div>
+        <p>对于因以下原因导致或与之相关的、我们遭受或合理产生的任何第三方索赔、损害、诉讼、损失、责任、成本和开支（包括合理的法律费用），您同意向我们进行赔偿、为其抗辩并使其免受损害：</p>
+        <ul class="policy-list">
+            <li>您访问和使用本应用实施了违法或侵权行为；</li>
+            <li>您利用本应用提取或分享了侵犯第三方知识产权的内容；</li>
+            <li>您对本协议任何条款的违反。</li>
+        </ul>
+    </section>
+
+    <section class="section" id="s9">
+        <div class="section-header">
+            <div class="section-num">09</div>
+            <h2 class="section-title">其他事项</h2>
+        </div>
+        <p>未经对方书面授权，用户不得转让或转移本条款授予的权利，亦不得将指定的责任和义务转让给他人。</p>
+        <p>本条款的效力和解释适用中华人民共和国（“中国”）法律。我们和用户均同意通过协商解决因本条款引起的争议。若协商不成，任何一方均可将争议提交仲裁，届时该等争议将最终且排他地由中国国际经济贸易仲裁委员会（“贸仲”）华南分会根据申请仲裁时有效的贸仲仲裁规则进行仲裁。仲裁裁决是终局的，对双方均有约束力。</p>
+        <p>我们保留对本条款的最终解释权。</p>
+    </section>
+
+    <section class="section" id="s10">
+        <div class="section-header">
+            <div class="section-num">10</div>
+            <h2 class="section-title">如何联系我们</h2>
+        </div>
+        <div class="contact-block">
+            <p>如果您对本服务或本协议有任何疑问，或者您想获取本文件的历史版本，请随时通过以下邮箱与我们联系：</p>
+            <div class="contact-email">1459906143@qq.com</div>
+            <p class="response-note">感谢您阅读本用户服务协议，并感谢您对本产品的使用与信任。我们将不断努力，为您提供更优秀、更安全的应用体验。</p>
+        </div>
+    </section>
+
+</main>
+
+<footer class="footer">
+    <div class="dates">
+        <span><strong>更新日期</strong> 2026-05-19</span>
+        <span><strong>生效日期</strong> 2026-05-19</span>
+    </div>
+    <div class="copyright">Apk导出 · 袁昌杰</div>
+</footer>
+
+</body>
+</html>
