@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy</title>
+    <style>
+        /* 基础变量定义：极致的暗色调与极简色彩层级 */
+        :root {
+            --bg-color: #0a0a0a;
+            --panel-bg: #121212;
+            --text-primary: #e5e5e5;
+            --text-secondary: #8e8e93;
+            --text-muted: #48484a;
+            --accent-color: #ffffff;
+            --border-color: #1c1c1e;
+            --max-width: 680px;
+        }
+
+        /* 全局样式重置 */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            background-color: var(--bg-color);
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        body {
+            color: var(--text-primary);
+            line-height: 1.8;
+            padding: 80px 24px;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* 页面主容器 */
+        .container {
+            width: 100%;
+            max-width: var(--max-width);
+        }
+
+        /* 头部样式 */
+        header {
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            color: var(--accent-color);
+            margin-bottom: 12px;
+        }
+
+        .meta-info {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            display: flex;
+            gap: 16px;
+        }
+
+        /* 分割线 */
+        hr {
+            border: 0;
+            border-top: 1px solid var(--border-color);
+            margin: 40px 0;
+        }
+
+        /* 正文内容样式 */
+        section {
+            margin-bottom: 48px;
+        }
+
+        /* 章节标题设计 */
+        h2 {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--accent-color);
+            margin-bottom: 18px;
+            margin-top: 32px;
+            letter-spacing: -0.01em;
+        }
+
+        /* 章节小标题 */
+        h3 {
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--text-primary);
+            margin: 16px 0 8px 0;
+        }
+
+        p {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+            text-align: justify;
+        }
+
+        /* 极简列表 */
+        ul.content-list {
+            list-style: none;
+            margin-bottom: 20px;
+        }
+
+        ul.content-list li {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            position: relative;
+            padding-left: 18px;
+            margin-bottom: 12px;
+            text-align: justify;
+        }
+
+        /* 自定义微型列表圆点 */
+        ul.content-list li::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 12px;
+            width: 4px;
+            height: 4px;
+            background-color: var(--text-muted);
+            border-radius: 50%;
+        }
+
+        /* 极简表格 */
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+            margin: 24px 0;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+            text-align: left;
+        }
+
+        th, td {
+            padding: 12px 16px;
+            border-bottom: 1px solid var(--border-color);
+            vertical-align: top;
+        }
+
+        th {
+            background-color: var(--panel-bg);
+            color: var(--text-primary);
+            font-weight: 500;
+        }
+
+        td {
+            color: var(--text-secondary);
+        }
+
+        /* 强调文本与链接 */
+        strong {
+            color: var(--accent-color);
+            font-weight: 500;
+        }
+
+        a.inline-link {
+            color: var(--accent-color);
+            text-decoration: none;
+            border-bottom: 1px solid var(--text-muted);
+            transition: border-color 0.2s;
+        }
+
+        a.inline-link:hover {
+            border-color: var(--accent-color);
+        }
+
+        /* 页脚样式 */
+        footer {
+            margin-top: 80px;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            text-align: center;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 768px) {
+            body {
+                padding: 40px 16px;
+            }
+            header {
+                margin-bottom: 30px;
+            }
+            h1 {
+                font-size: 1.75rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Privacy Policy</h1>
+        <div class="meta-info">
+            <span>Last Updated: May 31, 2026</span>
+            <span>Effective Date: May 31, 2026</span>
+        </div>
+    </header>
+
+    <p>This Privacy Policy applies solely to the mobile application <strong>[APK Exporter - Backup Extractor]</strong> (hereinafter referred to as "the App" or "our Service"), developed by <strong>Changjie Yuan</strong> ("we", "us", or "our"). We are deeply committed to protecting your personal information and privacy.</p>
+    <p>Before using our App, please read this policy thoroughly to understand how we handle your information. By accessing or using our Service, you acknowledge and agree to the terms of this Privacy Policy.</p>
+
+    <hr>
+
+    <section>
+        <h2>Table of Contents</h2>
+        <ul class="content-list">
+            <li><a href="#section-01" class="inline-link">01 Collection and Use of Information</a></li>
+            <li><a href="#section-02" class="inline-link">02 Cookies and Similar Technologies</a></li>
+            <li><a href="#section-03" class="inline-link">03 Data Sharing, Transfer, and Disclosure</a></li>
+            <li><a href="#section-04" class="inline-link">04 Data Security and Global Retention</a></li>
+            <li><a href="#section-05" class="inline-link">05 Your Privacy Rights</a></li>
+            <li><a href="#section-06" class="inline-link">06 EEA & GDPR Specific Provisions</a></li>
+            <li><a href="#section-07" class="inline-link">07 Children's Privacy & Google Play Policy</a></li>
+            <li><a href="#section-08" class="inline-link">08 Policy Updates</a></li>
+            <li><a href="#section-09" class="inline-link">09 Applicability</a></li>
+            <li><a href="#section-10" class="inline-link">10 Contact Us</a></li>
+        </ul>
+    </section>
+
+    <hr>
+
+    <section id="section-01">
+        <h2>01 Collection and Use of Information</h2>
+        <h3>Core App Features</h3>
+        <p>To provide our core functionalities, monitor stability, and optimize user experience, the App processes information required to manage, execute, or back up files locally on your device. We request specific device permissions or process localized parameters only when strictly necessary:</p>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                <tr>
+                    <th>Data Type / Permission</th>
+                    <th>Purpose & Handling Mechanism</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td><strong>Package / Installed App List Access</strong></td>
+                    <td>Used strictly to query and list the applications currently installed on your device, allowing you to interact with or manage them. This information is processed entirely locally on your device and is never uploaded to our servers.</td>
+                </tr>
+                <tr>
+                    <td><strong>Storage Access (Read/Write)</strong></td>
+                    <td>Required to read or write files into your designated device storage directory (e.g., the "Download" folder) based on your explicit operations.</td>
+                </tr>
+                <tr>
+                    <td><strong>AndroidID</strong></td>
+                    <td>Collected as a persistent device identifier. We use it solely to aggregate anonymized, device-level frequency statistics (such as successful operation counts and feature usage trends) to diagnose application stability and maintain quality.</td>
+                </tr>
+                <tr>
+                    <td><strong>System Environment Details</strong></td>
+                    <td>We may collect basic environment telemetry, including your Operating System version, device model, and network connectivity status, to ensure technical compatibility and general functionality.</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3>Crash Analytics and Error Reporting</h3>
+        <p>To identify product bugs and improve application performance, the App may automatically compile runtime logs, stack traces, error codes, and short diagnostic snippets when an unexpected crash or anomaly occurs.</p>
+    </section>
+
+    <section id="section-02">
+        <h2>02 Cookies and Similar Technologies</h2>
+        <p>Cookies and mobile tracking identifiers are industry-standard mechanisms widely deployed across internet services.</p>
+        <p>As a localized utility, this App does not deploy, store, or track any cookies, web beacons, or equivalent tracking technologies for user profiling, behavior tracking, or targeted advertising.</p>
+    </section>
+
+    <section id="section-03">
+        <h2>03 Data Sharing, Transfer, and Disclosure</h2>
+        <h3>Entrusted Processing</h3>
+        <p>Certain backend analytics or infrastructure modules may be maintained by trusted third-party service vendors (e.g., automated error reporting SDKs). We enforce strict confidentiality requirements with these providers, mandate adherence to this Privacy Policy, and require industry-standard security safeguards.</p>
+
+        <h3>Data Sharing</h3>
+        <p>We do not sell, barter, or share your personal data with external enterprises, organizations, or third parties, except under the following narrow circumstances:</p>
+        <ul class="content-list">
+            <li><strong>Explicit Consent:</strong> Sharing information after obtaining your unambiguous, proactive opt-in confirmation.</li>
+            <li><strong>Legal Requirements:</strong> Disclosing statistics or data requested by valid judicial mandates, administrative enforcement bodies, or statutory laws.</li>
+        </ul>
+
+        <h3>Data Transfer and Corporate Structuring</h3>
+        <p>We do not transfer your personal information to any external entities. In the event of a corporate merger, acquisition, asset sale, or restructuring, any transfer of historical logs or assets will remain strictly bound by the commitments established under this Privacy Policy.</p>
+
+        <h3>Public Disclosure</h3>
+        <p>We will only publicly disclose personal data if we receive your distinct explicit authorization, or where disclosure is legally mandated by judicial processes, litigation, or regulatory authorities.</p>
+    </section>
+
+    <section id="section-04">
+        <h2>04 Data Security and Global Retention</h2>
+        <p>We implement industry-standard administrative, physical, and technical safeguards (such as encrypted transmission protocols where applicable and restricted internal data access) designed to prevent unauthorized alteration, destruction, leak, or interception of information.</p>
+        <p><strong>Data Retention & Deletion:</strong> We strictly minimize our retention windows. Anonymized operational logs and technical telemetry are stored only for the minimum duration required to fulfill analytical optimizations, unless extensions are required by governing laws. Once data exceeds its intended analytical life cycle, it is completely erased or systematically anonymized.</p>
+        <p><em>Note: Given that the internet cannot be classified as an absolute, fail-safe environment, we advise against transmitting highly sensitive personal details through unencrypted channels such as email communication.</em></p>
+    </section>
+
+    <section id="section-05">
+        <h2>05 Your Privacy Rights</h2>
+        <p>Regardless of your geographic location, we respect your right to control your personal data. You are entitled to manage your data privacy through the following straightforward channels:</p>
+        <ul class="content-list">
+            <li><strong>Permission Management:</strong> You can revoke storage or application list permissions at any time through your device's system settings.</li>
+            <li><strong>Uninstallation and Cessation:</strong> You can completely cease all local data processing, permission authorization, and telemetry logging instantly by choosing to stop using or uninstalling the App from your mobile device.</li>
+        </ul>
+    </section>
+
+    <section id="section-06">
+        <h2>06 Provisions for EEA / EU Residents (GDPR Compliance)</h2>
+        <p>If you reside within the European Economic Area (EEA) or Switzerland, your data processing is governed by the General Data Protection Regulation (GDPR). We act as the Data Controller for information processed via the App.</p>
+
+        <h3>Legal Basis for Processing</h3>
+        <p>We process your data under the following legal bases:</p>
+        <ul class="content-list">
+            <li><strong>Legitimate Interests:</strong> To maintain, monitor, and optimize application stability and perform core operations (such as processing AndroidID for stability scaling).</li>
+            <li><strong>Consent:</strong> Where you grant specific device permissions (e.g., Storage and Installed App List Access).</li>
+        </ul>
+
+        <h3>Your Specific GDPR Rights</h3>
+        <p>You possess the statutory right to request access to, rectification of, or erasure of your data, as well as the right to object to or restrict processing, request data portability, or withdraw your consent at any time. To exercise these rights, please contact us via our designated support email below.</p>
+    </section>
+
+    <section id="section-07">
+        <h2>07 Children's Privacy & Google Play Compliance</h2>
+        <p>In accordance with the Google Play Developer Policy and COPPA (Children's Online Privacy Protection Act), our Service is not intended for or directed toward children under the age of 13 (or the relevant legal age threshold in your specific country, such as 16 within certain European jurisdictions).</p>
+        <p>We do not intentionally or knowingly harvest, query, or log personal information or device identifiers (like AndroidID) from minors. If you discover that a child under the minimum legal threshold has provided us with personal data without parental guidance, please contact us immediately so we can take prompt measures to remove such files from our systems.</p>
+    </section>
+
+    <section id="section-08">
+        <h2>08 Policy Updates</h2>
+        <p>We reserve the right to modify or replace this Privacy Policy periodically to reflect shifts in regulatory mandates or app optimizations.</p>
+        <p>We will not reduce your established rights under this framework without your explicit acknowledgment. Any revised policies will be posted openly on this page. For material modifications, we will provide conspicuous notices (such as distinct callouts within the App update changelogs or in-app notices).</p>
+    </section>
+
+    <section id="section-09">
+        <h2>09 Applicability</h2>
+        <p>This Privacy Policy applies universally to all global deployments and distribution channels of this utility software application.</p>
+    </section>
+
+    <section id="section-10">
+        <h2>10 Contact Us</h2>
+        <p>If you have any questions, compliance queries, or suggestions regarding your data privacy, please reach out to us:</p>
+        <p>Email: xiy9736@outlook.com</p>
+        <p>We are committed to addressing privacy inquiries within 15 business days (complying with the standard GDPR verification timeline). Thank you for your continued trust in our Service.</p>
+    </section>
+
+</div>
+
+</body>
+</html>
