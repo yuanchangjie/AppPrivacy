@@ -1,0 +1,93 @@
+User Agreement — APK Exporter - Backup Extractor
+Welcome to "APK Exporter - Backup Extractor" (hereinafter referred to as "the Software", "the Application", or "the Service"), operated by "Changjie Yuan" (hereinafter referred to as "we", "us", or "our"). These Terms of Service (hereinafter referred to as "this Agreement") constitute a legal contract between you and us regarding your download, installation, and use of this Application and related services. Your downloading, installation, use, and any other form of access to the Software are conditional upon your acceptance of and compliance with this Agreement. If you do not agree to this Agreement, please stop using this Application immediately.
+
+Table of Contents
+Intellectual Property Rights
+
+Application License and Scope of Use
+
+Privacy and Data Security
+
+Modifications to this Agreement
+
+Age Restrictions
+
+Special Disclaimer on Third-Party Software and Copyrights
+
+Disclaimer of Warranties
+
+Indemnification
+
+Governing Law and Dispute Resolution
+
+Miscellaneous and Contact Information
+
+1. Intellectual Property Rights
+This Application is independently developed by us. You acknowledge and agree that we retain all copyrights, trademarks, patents, trade secrets, including all intellectual property rights and any other related rights, titles, and interests associated with this Application. This Application and related information, including but not limited to text expressions and their combinations, icons, interface designs, colors, user interfaces, frameworks, related data, printed materials, or electronic documents, are protected by the copyright laws, trademark laws, patent laws, anti-unfair competition laws of applicable countries/regions, and relevant international treaties.
+
+You shall not (and shall not allow any third party to) directly or indirectly take any action that infringes or may infringe upon our intellectual property rights and related interests. We reserve the right to pursue legal liability for any infringement.
+
+[Reverse Engineering Prohibited] Unless prior written consent is obtained from us, you shall not (and shall not authorize any third party to) reverse engineer, decompile, or attempt to derive the source code of this Application, or create derivative works of this Application, its services, plug-ins, extensions, compatibility, or interconnected behaviors, whether for profit or non-profit purposes.
+
+2. Application License and Scope of Use
+We grant you a personal, revocable, non-transferable, and non-exclusive license to use this Application. You are permitted to install, use, display, or run this Application on your smart mobile terminal device (hereinafter referred to as "Terminal Device") for non-commercial purposes, to extract, backup, and share the APK installation packages of application software (Apps) already installed on your device.
+
+You shall use this Application solely for lawful purposes such as personal backup, learning, and research. You shall not use this Application under the following circumstances:
+
+Using this Application to extract, distribute, or disseminate APK files that infringe upon third-party intellectual property rights (including but not limited to pirated or unauthorized commercial software);
+
+Creating derivative works or conducting commercial development of this Application in any manner (whether in whole or in part);
+
+Engaging in any conduct that endangers computer network security, including but not limited to using this Application to probe, scan, or test system vulnerabilities, or intentionally using the extraction function to disrupt, interfere with, or bypass the security mechanisms of other software.
+
+Unless explicitly permitted by the features of this Application (such as the built-in sharing function), you shall not use this Application itself for commercial sale, modification, or secondary distribution.
+
+3. Privacy and Data Security
+[Local Processing Principle]
+Our Software focuses on providing local utility services. When the Application extracts or backs up APK files, the core file processing and data operations are conducted locally on your Terminal Device.
+
+[Data Collection and Authorization]
+To optimize product experience, conduct crash analysis, or implement specific features (such as sharing, storage, or analyzing the device runtime environment), this Application may collect necessary non-sensitive device information. For specific details on how we collect, use, and protect your personal data, as well as the necessary system permissions required, please refer to our Privacy Policy. Your continued use of the Service indicates your consent to our processing of relevant data in accordance with the Privacy Policy.
+
+4. Modifications to this Agreement
+Any new features added to the current Software will also be subject to this Agreement. You can view the latest version of this Agreement at any time within the Software.
+
+We reserve the right to update, change, or replace any part of this Agreement by posting updates and/or changes to our Software. If you continue to use our Software after the date of amendments to the terms, your continued use will be deemed as acceptance of and compliance with the updated terms.
+
+5. Age Restrictions
+This Application is not directly targeted at minor users (especially children under 13 or the age specified by applicable local laws). If you are a minor and insist on using this Application, you must obtain the prior consent of your guardian and/or other adults with guardianship responsibilities, and use this Application under their guidance and supervision. Your use of this Application must comply with the laws and regulations concerning minors in your country or region.
+
+6. Special Disclaimer on Third-Party Software and Copyrights
+[Technical Tool Attribute] This Software operates as a technical tool, providing you solely with the technical convenience of reading and backing up APK files already existing on your Terminal Device. The Software itself does not provide, host, or store any third-party applications or their download sources.
+
+The intellectual property rights of any third-party applications you extract, back up, or share through this Software belong to the respective rights holders of those applications. You must ensure that your extraction and sharing behaviors have obtained explicit permission from the original rights holder or fall within the scope of fair use permitted by applicable laws (such as personal backup).
+
+Any legal disputes or infringement claims arising from your improper use of this Software (including but not limited to using the extracted APK for illegal dissemination, commercial profit-making, malicious cracking, infringing others' copyrights, or bypassing digital rights management mechanisms) shall be borne entirely by you, and are unrelated to this Software and its developers.
+
+7. Disclaimer of Warranties
+You acknowledge and agree that due to system compatibility issues (such as restrictions across different Android OS versions), insufficient device storage space, restricted system permissions, mobile terminal viruses or hacker attacks, system instability, and other technical or terminal failures, this Application may experience risks such as extraction failures, sharing interruptions, or non-responsiveness. To the maximum extent permitted by applicable law, we shall not be liable for any such risks or any direct or indirect losses caused thereby.
+
+In view of business development, system upgrades, and adjustments, we reserve the right to modify, suspend, or terminate part or all of the services at any time without liability to users or any other third party.
+
+Any derivative works of this Software that have not been officially released or authorized by us are illegal. Downloading, installing, and using this Application through non-official channels may bring unpredictable risks (such as data corruption or bundled malware). We assume no legal responsibility or liability for issues arising from such use.
+
+8. Indemnification
+You agree to indemnify, defend, and hold us harmless from and against any third-party claims, damages, lawsuits, losses, liabilities, costs, and expenses (包括合理的律师费和法律费用 / including reasonable attorneys' fees and legal costs) suffered or reasonably incurred by us arising out of or in connection with:
+
+Your access to and use of this Application in violation of laws or infringing upon others' rights;
+
+Your use of this Application to extract or share content that infringes upon third-party intellectual property rights or other legitimate rights;
+
+Your violation of any provision of this Agreement.
+
+9. Governing Law and Dispute Resolution
+The validity, interpretation, and enforcement of these terms shall be governed by the laws of the People's Republic of China (for the purpose of this Agreement, excluding Hong Kong, Macau, and Taiwan).
+
+Both we and the user agree to first resolve any dispute arising out of or in connection with these terms through friendly negotiation. If negotiation fails, either party may submit the dispute to arbitration, which shall be finally and exclusively conducted by the South China Sub-Commission of the China International Economic and Trade Arbitration Commission ("CIETAC") in accordance with the arbitration rules of CIETAC in effect at the time of applying for arbitration. The arbitral award is final and binding upon both parties.
+
+10. Miscellaneous and Contact Information
+Without prior written authorization from the other party, the user shall not assign or transfer the rights granted under these terms, nor delegate the designated responsibilities and obligations to others. We reserve the right of final interpretation of these terms.
+
+If you have any questions about this Service or this Agreement, or if you wish to obtain historical versions of this document, please feel free to contact us via the following email:
+
+Contact Email: xiy9736@outlook.com

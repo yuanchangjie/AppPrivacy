@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Agreement — APK Exporter - Backup Extractor</title>
+    <style>
+        /* 基础变量定义：极致的暗色调与极简色彩层级 */
+        :root {
+            --bg-color: #0a0a0a;
+            --panel-bg: #121212;
+            --text-primary: #e5e5e5;
+            --text-secondary: #8e8e93;
+            --text-muted: #48484a;
+            --accent-color: #ffffff;
+            --border-color: #1c1c1e;
+            --max-width: 680px;
+        }
+
+        /* 全局样式重置 */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            background-color: var(--bg-color);
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        body {
+            color: var(--text-primary);
+            line-height: 1.8;
+            padding: 80px 24px;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* 页面主容器 */
+        .container {
+            width: 100%;
+            max-width: var(--max-width);
+        }
+
+        /* 头部样式 */
+        header {
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            color: var(--accent-color);
+            margin-bottom: 12px;
+        }
+
+        .meta-info {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            display: flex;
+            gap: 16px;
+        }
+
+        /* 分割线 */
+        hr {
+            border: 0;
+            border-top: 1px solid var(--border-color);
+            margin: 40px 0;
+        }
+
+        /* 正文内容样式 */
+        section {
+            margin-bottom: 48px;
+        }
+
+        /* 章节标题设计 */
+        h2 {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--accent-color);
+            margin-bottom: 18px;
+            margin-top: 32px;
+            letter-spacing: -0.01em;
+        }
+
+        /* 章节小标题 */
+        h3 {
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--text-primary);
+            margin: 16px 0 8px 0;
+        }
+
+        p {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+            text-align: justify;
+        }
+
+        /* 极简列表 */
+        ul.content-list {
+            list-style: none;
+            margin-bottom: 20px;
+        }
+
+        ul.content-list li {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            position: relative;
+            padding-left: 18px;
+            margin-bottom: 12px;
+            text-align: justify;
+        }
+
+        /* 自定义微型列表圆点 */
+        ul.content-list li::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 12px;
+            width: 4px;
+            height: 4px;
+            background-color: var(--text-muted);
+            border-radius: 50%;
+        }
+
+        /* 极简表格 */
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+            margin: 24px 0;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+            text-align: left;
+        }
+
+        th, td {
+            padding: 12px 16px;
+            border-bottom: 1px solid var(--border-color);
+            vertical-align: top;
+        }
+
+        th {
+            background-color: var(--panel-bg);
+            color: var(--text-primary);
+            font-weight: 500;
+        }
+
+        td {
+            color: var(--text-secondary);
+        }
+
+        /* 强调文本与链接 */
+        strong {
+            color: var(--accent-color);
+            font-weight: 500;
+        }
+
+        a.inline-link {
+            color: var(--accent-color);
+            text-decoration: none;
+            border-bottom: 1px solid var(--text-muted);
+            transition: border-color 0.2s;
+        }
+
+        a.inline-link:hover {
+            border-color: var(--accent-color);
+        }
+
+        /* 页脚样式 */
+        footer {
+            margin-top: 80px;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            text-align: center;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 768px) {
+            body {
+                padding: 40px 16px;
+            }
+            header {
+                margin-bottom: 30px;
+            }
+            h1 {
+                font-size: 1.75rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>User Agreement</h1>
+        <div class="meta-info">
+            <span>Last Updated: May 31, 2026</span>
+            <span>Effective Date: May 31, 2026</span>
+        </div>
+    </header>
+
+    <section>
+        <p>Welcome to <strong>"APK Exporter - Backup Extractor"</strong> (hereinafter referred to as "the Software", "the Application", or "the Service"), operated by <strong>"Changjie Yuan"</strong> (hereinafter referred to as "we", "us", or "our"). These Terms of Service (hereinafter referred to as "this Agreement") constitute a legal contract between you and us regarding your download, installation, and use of this Application and related services.</p>
+        <p>Your downloading, installation, use, and any other form of access to the Software are conditional upon your acceptance of and compliance with this Agreement. If you do not agree to this Agreement, please stop using this Application immediately.</p>
+    </section>
+
+    <hr>
+
+    <section>
+        <h2>1. Intellectual Property Rights</h2>
+        <p>This Application is independently developed by us. You acknowledge and agree that we retain all copyrights, trademarks, patents, trade secrets, including all intellectual property rights and any other related rights, titles, and interests associated with this Application. This Application and related information, including but not limited to text expressions and their combinations, icons, interface designs, colors, user interfaces, frameworks, related data, printed materials, or electronic documents, are protected by the copyright laws, trademark laws, patent laws, anti-unfair competition laws of applicable countries/regions, and relevant international treaties.</p>
+        <p>You shall not (and shall not allow any third party to) directly or indirectly take any action that infringes or may infringe upon our intellectual property rights and related interests. We reserve the right to pursue legal liability for any infringement.</p>
+        <p><strong>[Reverse Engineering Prohibited]</strong> Unless prior written consent is obtained from us, you shall not (and shall not authorize any third party to) reverse engineer, decompile, or attempt to derive the source code of this Application, or create derivative works of this Application, its services, plug-ins, extensions, compatibility, or interconnected behaviors, whether for profit or non-profit purposes.</p>
+    </section>
+
+    <section>
+        <h2>2. Application License and Scope of Use</h2>
+        <p>We grant you a personal, revocable, non-transferable, and non-exclusive license to use this Application. You are permitted to install, use, display, or run this Application on your smart mobile terminal device (hereinafter referred to as "Terminal Device") for non-commercial purposes, to extract, backup, and share the APK installation packages of application software (Apps) already installed on your device.</p>
+        <p>You shall use this Application solely for lawful purposes such as personal backup, learning, and research. You shall not use this Application under the following circumstances:</p>
+        <ul class="content-list">
+            <li>Using this Application to extract, distribute, or disseminate APK files that infringe upon third-party intellectual property rights (including but not limited to pirated or unauthorized commercial software);</li>
+            <li>Creating derivative works or conducting commercial development of this Application in any manner (whether in whole or in part);</li>
+            <li>Engaging in any conduct that endangers computer network security, including but not limited to using this Application to probe, scan, or test system vulnerabilities, or intentionally using the extraction function to disrupt, interfere with, or bypass the security mechanisms of other software.</li>
+        </ul>
+        <p>Unless explicitly permitted by the features of this Application (such as the built-in sharing function), you shall not use this Application itself for commercial sale, modification, or secondary distribution.</p>
+    </section>
+
+    <section>
+        <h2>3. Privacy and Data Security</h2>
+        <h3>[Local Processing Principle]</h3>
+        <p>Our Software focuses on providing local utility services. When the Application extracts or backs up APK files, the core file processing and data operations are conducted locally on your Terminal Device.</p>
+        <h3>[Data Collection and Authorization]</h3>
+        <p>To optimize product experience, conduct crash analysis, or implement specific features (such as sharing, storage, or analyzing the device runtime environment), this Application may collect necessary non-sensitive device information. For specific details on how we collect, use, and protect your personal data, as well as the necessary system permissions required, please refer to our Privacy Policy. Your continued use of the Service indicates your consent to our processing of relevant data in accordance with the Privacy Policy.</p>
+    </section>
+
+    <section>
+        <h2>4. Modifications to this Agreement</h2>
+        <p>Any new features added to the current Software will also be subject to this Agreement. You can view the latest version of this Agreement at any time within the Software.</p>
+        <p>We reserve the right to update, change, or replace any part of this Agreement by posting updates and/or changes to our Software. If you continue to use our Software after the date of amendments to the terms, your continued use will be deemed as acceptance of and compliance with the updated terms.</p>
+    </section>
+
+    <section>
+        <h2>5. Age Restrictions</h2>
+        <p>This Application is not directly targeted at minor users (especially children under 13 or the age specified by applicable local laws). If you are a minor and insist on using this Application, you must obtain the prior consent of your guardian and/or other adults with guardianship responsibilities, and use this Application under their guidance and supervision. Your use of this Application must comply with the laws and regulations concerning minors in your country or region.</p>
+    </section>
+
+    <section>
+        <h2>6. Special Disclaimer on Third-Party Software and Copyrights</h2>
+        <p><strong>[Technical Tool Attribute]</strong> This Software operates as a technical tool, providing you solely with the technical convenience of reading and backing up APK files already existing on your Terminal Device. The Software itself does not provide, host, or store any third-party applications or their download sources.</p>
+        <p>The intellectual property rights of any third-party applications you extract, back up, or share through this Software belong to the respective rights holders of those applications. You must ensure that your extraction and sharing behaviors have obtained explicit permission from the original rights holder or fall within the scope of fair use permitted by applicable laws (such as personal backup).</p>
+        <p>Any legal disputes or infringement claims arising from your improper use of this Software (including but not limited to using the extracted APK for illegal dissemination, commercial profit-making, malicious cracking, infringing others' copyrights, or bypassing digital rights management mechanisms) shall be borne entirely by you, and are unrelated to this Software and its developers.</p>
+    </section>
+
+    <section>
+        <h2>7. Disclaimer of Warranties</h2>
+        <p>You acknowledge and agree that due to system compatibility issues (such as restrictions across different Android OS versions), insufficient device storage space, restricted system permissions, mobile terminal viruses or hacker attacks, system instability, and other technical or terminal failures, this Application may experience risks such as extraction failures, sharing interruptions, or non-responsiveness. To the maximum extent permitted by applicable law, we shall not be liable for any such risks or any direct or indirect losses caused thereby.</p>
+        <p>In view of business development, system upgrades, and adjustments, we reserve the right to modify, suspend, or terminate part or all of the services at any time without liability to users or any other third party.</p>
+        <p>Any derivative works of this Software that have not been officially released or authorized by us are illegal. Downloading, installing, and using this Application through non-official channels may bring unpredictable risks (such as data corruption or bundled malware). We assume no legal responsibility or liability for issues arising from such use.</p>
+    </section>
+
+    <section>
+        <h2>8. Indemnification</h2>
+        <p>You agree to indemnify, defend, and hold us harmless from and against any third-party claims, damages, lawsuits, losses, liabilities, costs, and expenses (including reasonable attorneys' fees and legal costs) suffered or reasonably incurred by us arising out of or in connection with:</p>
+        <ul class="content-list">
+            <li>Your access to and use of this Application in violation of laws or infringing upon others' rights;</li>
+            <li>Your use of this Application to extract or share content that infringes upon third-party intellectual property rights or other legitimate rights;</li>
+            <li>Your violation of any provision of this Agreement.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>9. Governing Law and Dispute Resolution</h2>
+        <p>The validity, interpretation, and enforcement of these terms shall be governed by the laws of the People's Republic of China (for the purpose of this Agreement, excluding Hong Kong, Macau, and Taiwan).</p>
+        <p>Both we and the user agree to first resolve any dispute arising out of or in connection with these terms through friendly negotiation. If negotiation fails, either party may submit the dispute to arbitration, which shall be finally and exclusively conducted by the South China Sub-Commission of the China International Economic and Trade Arbitration Commission ("CIETAC") in accordance with the arbitration rules of CIETAC in effect at the time of applying for arbitration. The arbitral award is final and binding upon both parties.</p>
+    </section>
+
+    <section>
+        <h2>10. Miscellaneous and Contact Information</h2>
+        <p>Without prior written authorization from the other party, the user shall not assign or transfer the rights granted under these terms, nor delegate the designated responsibilities and obligations to others. We reserve the right of final interpretation of these terms.</p>
+        <p>If you have any questions about this Service or this Agreement, or if you wish to obtain historical versions of this document, please feel free to contact us via the following email:</p>
+        <p>Contact Email: xiy9736@outlook.com</p>
+    </section>
+
+</div>
+
+</body>
+</html>
