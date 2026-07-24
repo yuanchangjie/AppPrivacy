@@ -403,6 +403,82 @@
         }
 
         /* Responsive */
+        /* ======== 第三方SDK卡片样式 ======== */
+        .sdk-card-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-top: 28px;
+        }
+        .sdk-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 24px;
+            box-shadow: 0 2px 12px var(--shadow);
+            transition: box-shadow 0.2s ease;
+        }
+        .sdk-card:hover { box-shadow: 0 4px 20px var(--shadow); }
+        .sdk-card-header {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 16px;
+            padding-bottom: 14px;
+            border-bottom: 1px solid var(--border-light);
+        }
+        .sdk-card-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 6px;
+            background: linear-gradient(135deg, #fdf9f0 0%, #f9f3e8 100%);
+            border: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-family: 'Noto Serif SC', serif;
+            font-weight: 700;
+            font-size: 18px;
+            color: var(--accent-dark);
+        }
+        .sdk-card-name {
+            font-family: 'Noto Serif SC', serif;
+            font-size: 17px;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        .sdk-card-provider {
+            font-size: 12.5px;
+            color: var(--text-muted);
+            margin-top: 2px;
+        }
+        .sdk-card-row {
+            display: grid;
+            grid-template-columns: 80px 1fr;
+            gap: 12px;
+            margin-bottom: 14px;
+            font-size: 13.5px;
+        }
+        .sdk-card-label {
+            font-weight: 500;
+            color: var(--text-muted);
+            font-size: 12.5px;
+            letter-spacing: 0.03em;
+            padding-top: 2px;
+        }
+        .sdk-card-value { color: var(--text-body); line-height: 1.7; }
+        .sdk-card-purpose { color: var(--accent-dark); font-weight: 500; }
+        .sdk-card-link {
+            display: inline-block;
+            margin-top: 4px;
+            font-size: 12.5px;
+            color: var(--accent-dark);
+            text-decoration: none;
+            border-bottom: 1px dashed var(--accent);
+        }
+        .sdk-card-link:hover { color: var(--accent); }
+
         @media (max-width: 600px) {
             .header {
                 padding: 56px 20px 40px;
@@ -463,6 +539,7 @@
         <a class="toc-item" href="#s1"><span class="toc-num">一</span>我们如何收集和使用您的个人信息</a>
         <a class="toc-item" href="#s2"><span class="toc-num">二</span>我们如何使用 Cookie 和同类技术</a>
         <a class="toc-item" href="#s3"><span class="toc-num">三</span>委托处理、共享、转让与公开披露</a>
+        <a class="toc-item" href="#s3-sdk"><span class="toc-num">十</span>第三方SDK清单</a>
         <a class="toc-item" href="#s4"><span class="toc-num">四</span>我们如何保护您的个人信息</a>
         <a class="toc-item" href="#s5"><span class="toc-num">五</span>您的权利</a>
         <a class="toc-item" href="#s6"><span class="toc-num">六</span>未成年人的保护</a>
@@ -553,6 +630,36 @@
                 <li>基于法律的披露：在法律、法律程序、诉讼或政府主管部门强制性要求的情况下，我们可能会公开披露您的个人信息。</li>
             </ul>
             <p>我们已知晓对外共享、转让、公开披露个人信息所承担的相应法律责任，并将采取合理措施保障个人信息安全。</p>
+        </div>
+
+        <div class="subsection" id="s3-sdk">
+            <h3 class="subsection-title">第三方SDK清单</h3>
+            <p>为实现以下功能目的，本产品中使用了第三方 SDK，这些 SDK 会按本政策所述收集和使用相关信息。我们会以审慎态度选择合作伙伴并监督其个人信息处理行为。</p>
+            <div class="sdk-card-list">
+                <article class="sdk-card">
+                    <header class="sdk-card-header">
+                        <div class="sdk-card-icon">A</div>
+                        <div>
+                            <div class="sdk-card-name">adSet 广告</div>
+                            <div class="sdk-card-provider">上海神蓍信息科技有限公司</div>
+                        </div>
+                    </header>
+                    <div class="sdk-card-row">
+                        <span class="sdk-card-label">使用目的</span>
+                        <span class="sdk-card-value sdk-card-purpose">广告投放、广告归因、广告反作弊</span>
+                    </div>
+                    <div class="sdk-card-row">
+                        <span class="sdk-card-label">收集信息</span>
+                        <span class="sdk-card-value">
+                            设备标识符（IMEI、AndroidID、OAID、GAID）、设备信息（制造商、型号、系统版本）、应用信息（包名、版本号）、粗略位置、广告交互数据（曝光、点击等）
+                        </span>
+                    </div>
+                    <div class="sdk-card-row">
+                        <span class="sdk-card-label">隐私规则</span>
+                        <span class="sdk-card-value"><a class="sdk-card-link" href="https://doc.shenshiads.com/SdkYszc.html" target="_blank" rel="noopener">查看对方隐私规则 →</a></span>
+                    </div>
+                </article>
+            </div>
         </div>
     </section>
 
