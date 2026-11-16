@@ -4,11 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>服务协议 — Apk导出</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
     <style>
         :root {
+            --font-sans: 'Noto Sans SC', 'Noto Sans CJK SC', -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            --font-serif: 'Noto Serif SC', 'Noto Serif CJK SC', 'Songti SC', 'SimSun', serif;
             --bg: #faf8f4;
             --surface: #ffffff;
             --accent: #c9a96e;
@@ -28,7 +27,7 @@
         }
 
         body {
-            font-family: 'Noto Sans SC', sans-serif;
+            font-family: var(--font-sans);
             background: var(--bg);
             color: var(--text-body);
             line-height: 1.9;
@@ -62,7 +61,7 @@
         }
 
         .header h1 {
-            font-family: 'Noto Serif SC', serif;
+            font-family: var(--font-serif);
             font-size: clamp(32px, 5vw, 48px);
             font-weight: 700;
             color: var(--text-primary);
@@ -101,7 +100,7 @@
         }
 
         .toc-title {
-            font-family: 'Noto Serif SC', serif;
+            font-family: var(--font-serif);
             font-size: 16px;
             font-weight: 600;
             letter-spacing: 0.15em;
@@ -133,7 +132,7 @@
         }
 
         .toc-num {
-            font-family: 'Noto Serif SC', serif;
+            font-family: var(--font-serif);
             font-weight: 700;
             font-size: 15px;
             color: var(--accent-dark);
@@ -176,7 +175,7 @@
         }
 
         .section-num {
-            font-family: 'Noto Serif SC', serif;
+            font-family: var(--font-serif);
             font-size: 32px;
             font-weight: 700;
             color: var(--accent);
@@ -185,7 +184,7 @@
         }
 
         .section-title {
-            font-family: 'Noto Serif SC', serif;
+            font-family: var(--font-serif);
             font-size: 20px;
             font-weight: 600;
             color: var(--text-primary);
@@ -199,7 +198,7 @@
         }
 
         .subsection-title {
-            font-family: 'Noto Sans SC', sans-serif;
+            font-family: var(--font-sans);
             font-size: 15px;
             font-weight: 700;
             color: var(--text-primary);
@@ -257,7 +256,7 @@
             height: auto;
             border-radius: 0;
             background: none;
-            font-family: 'Noto Serif SC', serif;
+            font-family: var(--font-serif);
             font-weight: 700;
             font-size: 13px;
             color: var(--accent-dark);
@@ -311,7 +310,7 @@
         }
 
         .contact-email {
-            font-family: 'Noto Serif SC', serif;
+            font-family: var(--font-serif);
             font-size: 18px;
             font-weight: 600;
             color: var(--accent);

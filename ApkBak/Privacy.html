@@ -4,11 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>隐私政策 — Apk导出</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
     <style>
         :root {
+            --font-sans: 'Noto Sans SC', 'Noto Sans CJK SC', -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            --font-serif: 'Noto Serif SC', 'Noto Serif CJK SC', 'Songti SC', 'SimSun', serif;
             --bg: #faf8f4;
             --surface: #ffffff;
             --accent: #c9a96e;
@@ -28,7 +27,7 @@
         }
 
         body {
-            font-family: 'Noto Sans SC', sans-serif;
+            font-family: var(--font-sans);
             background: var(--bg);
             color: var(--text-body);
             line-height: 1.9;
@@ -86,7 +85,7 @@
         }
 
         .header h1 {
-            font-family: 'Noto Serif SC', serif;
+            font-family: var(--font-serif);
             font-size: clamp(32px, 5vw, 48px);
             font-weight: 700;
             color: var(--text-primary);
@@ -140,7 +139,7 @@
         }
 
         .toc-title {
-            font-family: 'Noto Serif SC', serif;
+            font-family: var(--font-serif);
             font-size: 16px;
             font-weight: 600;
             letter-spacing: 0.15em;
@@ -172,7 +171,7 @@
         }
 
         .toc-num {
-            font-family: 'Noto Serif SC', serif;
+            font-family: var(--font-serif);
             font-weight: 700;
             font-size: 15px;
             color: var(--accent-dark);
@@ -213,7 +212,7 @@
         }
 
         .section-num {
-            font-family: 'Noto Serif SC', serif;
+            font-family: var(--font-serif);
             font-size: 32px;
             font-weight: 700;
             color: var(--accent);
@@ -222,7 +221,7 @@
         }
 
         .section-title {
-            font-family: 'Noto Serif SC', serif;
+            font-family: var(--font-serif);
             font-size: 20px;
             font-weight: 600;
             color: var(--text-primary);
@@ -236,7 +235,7 @@
         }
 
         .subsection-title {
-            font-family: 'Noto Sans SC', sans-serif;
+            font-family: var(--font-sans);
             font-size: 15px;
             font-weight: 700;
             color: var(--text-primary);
@@ -294,7 +293,7 @@
             height: auto;
             border-radius: 0;
             background: none;
-            font-family: 'Noto Serif SC', serif;
+            font-family: var(--font-serif);
             font-weight: 700;
             font-size: 13px;
             color: var(--accent-dark);
@@ -343,7 +342,7 @@
         }
 
         .contact-email {
-            font-family: 'Noto Serif SC', serif;
+            font-family: var(--font-serif);
             font-size: 18px;
             font-weight: 600;
             color: var(--accent);
@@ -437,13 +436,13 @@
             align-items: center;
             justify-content: center;
             flex-shrink: 0;
-            font-family: 'Noto Serif SC', serif;
+            font-family: var(--font-serif);
             font-weight: 700;
             font-size: 18px;
             color: var(--accent-dark);
         }
         .sdk-card-name {
-            font-family: 'Noto Serif SC', serif;
+            font-family: var(--font-serif);
             font-size: 17px;
             font-weight: 600;
             color: var(--text-primary);
@@ -564,7 +563,7 @@
             <ul class="policy-list">
                 <li><strong>读取软件列表权限</strong>：用于在功能界面展示您设备上已安装的应用，供您选择需要导出的 Apk 文件，仅在您的设备上使用。</li>
                 <li><strong>读写手机存储权限</strong>：用于将您选中的 Apk 文件导出并写入至您指定的设备存储目录（例如"Download"文件夹），以实现导出功能。</li>
-                <li><strong>AndroidID</strong>：作为设备的标识符，我们将其用于在设备维度统计导出功能的使用频率（如导出次数、成功率）、分析功能质量与稳定性；以及当您使用会员购买功能时，在设备维度标识您的会员身份、同步会员状态和处理订单。
+                <li><strong>AndroidID</strong>：作为设备的标识符，我们将其用于在设备维度统计导出功能的使用频率（如导出次数、成功率）、分析功能质量与稳定性；以及当您使用会员购买功能时，在设备维度标识您的会员身份、同步会员状态和处理订单。</li>
                 <li><strong>请求安装软件包权限</strong>：当您通过文件管理器或其他应用（如微信）打开或分享 Apk 文件至本产品时，本产品将读取您所传入的文件，并调用系统安装程序为您完成安装。我们不会收集或上传该文件的任何内容。</li>
             </ul>
         </div>
